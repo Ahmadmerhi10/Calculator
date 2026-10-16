@@ -1,0 +1,118 @@
+/* إعدادات عامة لتوسيط الآلة الحاسبة في منتصف الشاشة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* الحاوية الرئيسية للآلة الحاسبة */
+.calculator {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 320px;
+}
+
+/* شاشة العرض */
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: left;
+    padding: 0 15px;
+    direction: ltr; /* لضمان ظهور الأرقام والعمليات من اليسار لليمين بشكل طبيعي */
+    outline: none;
+}
+
+/* شبكة الأزرار */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* تصميم الأزرار الأساسية */
+.btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* تأثير الضغطة وتحويم الماوس */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* تخصيص ألوان العمليات والأزرار المميزة */
+.btn.operator {
+    background: rgba(255, 152, 0, 0.3);
+    color: #ffb74d;
+}
+
+.btn.operator:hover {
+    background: rgba(255, 152, 0, 0.5);
+}
+
+.btn.clear {
+    background: rgba(244, 67, 54, 0.3);
+    color: #ef5350;
+}
+
+.btn.clear:hover {
+    background: rgba(244, 67, 54, 0.5);
+}
+
+.btn.delete {
+    background: rgba(158, 158, 158, 0.3);
+    color: #e0e0e0;
+}
+
+.btn.delete:hover {
+    background: rgba(158, 158, 158, 0.5);
+}
+
+.btn.equal {
+    background: rgba(76, 175, 80, 0.4);
+    color: #81c784;
+    grid-row: span 2; /* جعل زر التساوي يمتد على صفين لمظهر أفضل */
+    height: 100%;
+}
+
+.btn.equal:hover {
+    background: rgba(76, 175, 80, 0.6);
+}
+
+.btn.zero {
+    grid-column: span 2; /* زر الصفر يأخذ عرض عمودين */
+}
